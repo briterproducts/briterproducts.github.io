@@ -45,14 +45,14 @@
       <nav class="nav-menu d-none d-lg-block">
         <ul>
 
-          <li><a href="index.html#customer">New Customers</a></li>
-          <li><a href="index.html#assessment">RV Assessment</a></li>
-          <li><a href="index.html#mediaupload">Images and Video Upload</a></li>
+          <li><a href="/customer_form.html">New Customers</a></li>
+          <li><a href="/Assessment_Form.html">RV Assessment</a></li>
+          <li><a href="/index.html#mediaupload">Images and Video Upload</a></li>
 
 
-          <li><a href="index.html#contact">Contact</a></li>
+          <li><a href="/index.html#contact">Contact</a></li>
 
-          <li class="get-started"><a href="index.html">Go back to Home Page</a></li
+          <li class="get-started"><a href="/index.html">Go back to Home Page</a></li>
         </ul>
       </nav><!-- .nav-menu -->
 
@@ -96,14 +96,15 @@
 <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" rel="stylesheet">
 <link href="Assessment_Form.css" rel="stylesheet"/>
 
+<script type="text/javascript">var submitted=false;</script>
+<iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="if(submitted)  {window.location='/Assessment_Form.html';}"></iframe>
 
-
-<form class="p-3" action="https://docs.google.com/forms/d/e/1FAIpQLSdyLkX81h3SwO8n4vLmMLzwgE_ydN_-AeZfh4bds8fexqC1BA/formResponse">
+<form class="p-3" action="https://docs.google.com/forms/d/e/1FAIpQLSdyLkX81h3SwO8n4vLmMLzwgE_ydN_-AeZfh4bds8fexqC1BA/formResponse" target="hidden_iframe" onsubmit="submitted=true;" method="post">
     <div class="form-group">
         <label for="name">Customer Name</label>
-        <input name = "entry.664977521" type="text" class="form-control" id="name">
+        <input name = "entry.664977521" type="text" class="form-control" id="name" required>
         <label for="email">Customer Email</label>
-        <input name = "entry.42977799" type="text" class="form-control" id="email">
+        <input name = "entry.42977799" type="text" class="form-control" id="email" required>
         <label for="make">Make of RV</label>
         <input name = "entry.395564623" type="text" class="form-control" id="make">
     </div>
@@ -119,16 +120,15 @@
         <label for="floorplan_num">Floorplan Number</label>
         <input name="entry.1558102027" type="text" class="form-control" id="floorplan_num">
     </div>
-    <div class="form-group">
+   
         <label for="battery_type">What battery type do you have for your coach batteries?</label> <br/><br/>
         
-       
-        <input type="radio" name = "entry.330954181"/> Lead Acid <br/><br/>
-        <input type="radio" name = "entry.330954181"/> AGM <br/><br/>
-        <input type="radio" name = "entry.330954181"/> GEL <br/><br/>
-        <input type="radio" name = "entry.330954181"/> Lithium <br/><br/>
+        <input type="radio" value="Lead Acid" name = "entry.330954181"/> Lead Acid <br/><br/>
+        <input type="radio" value="AGM" name = "entry.330954181"/> AGM <br/><br/>
+        <input type="radio" value="GEL" name = "entry.330954181"/> GEL <br/><br/>
+        <input type="radio" value="Lithium" name = "entry.330954181"/> Lithium <br/><br/>
         
-    </div>
+   
     <div class="form-group">
         <label for="battery_num">How many batteries do you have?</label>
         <input name="entry.1498902659" type="text" class="form-control" id="battery_num">
@@ -149,16 +149,16 @@
         <label for="battery_volt">What is the voltage of the battery?</label> <br/><br/>
         
         
-        <input type="radio" name="entry.1327899920"/> 6 <br/><br/>
-        <input type="radio"  name="entry.1327899920"/> 12 <br/><br/>
-        <input type="radio"  name="entry.1327899920"/> 24 <br/><br/>
+        <input type="radio" value="6" name="entry.1327899920"/> 6 <br/><br/>
+        <input type="radio" value="12" name="entry.1327899920"/> 12 <br/><br/>
+        <input type="radio" value="24" name="entry.1327899920"/> 24 <br/><br/>
         
     </div>
     <div class="form-group">
         <label for="battery_compartment">Where is the battery compartment?</label> <br/><br/>
         
-        <input type="radio" name="entry.1232342427"/> Compartment <br/><br/>
-        <input type="radio" name="entry.1232342427"/> Stepwell <br/><br/>
+        <input type="radio" value="Compartment" name="entry.1232342427"/> Compartment <br/><br/>
+        <input type="radio" value="Stepwell" name="entry.1232342427"/> Stepwell <br/><br/>
         
     </div>
   <div class="form-group">
@@ -175,27 +175,27 @@
     <input name="entry.488080184" type="number" min="0" class="form-control" id="tray_width">
   </div>
   <div class="form-group">
-        <label for="comp_length_open">What is the size of the length of the compartment/stepwell's opening?</label>
+        <label for="comp_length_open">What is the outer length of the compartment/stepwell's opening? </label>
         <input name="entry.1714327095" type="number" min="0" class="form-control" id="comp_length_open">
     </div>
     <div class="form-group">
-        <label for="comp_height_open">What is the size of the height of the compartment/stepwell's opening?</label>
+        <label for="comp_height_open">What is the outer height of the compartment/stepwell's opening? </label>
         <input name="entry.367299157" type="number" min="0" class="form-control" id="comp_height_open">
     </div>
     <div class="form-group">
-        <label for="comp_width_open">What is the size of the width of the compartment/stepwell's opening?</label>
+        <label for="comp_width_open">What is the outer width of the compartment/stepwell's opening? </label>
         <input name="entry.2141007599" type="number" min="0" class="form-control" id="comp_width_open">
     </div>
     <div class="form-group">
-        <label for="comp_length_vol">What is the size of the length of the compartment/stepwell's internal volume?</label>
+        <label for="comp_length_vol">What is the inner length of the compartment/stepwell's opening?</label>
         <input name="entry.1182108743" type="number" min="0" class="form-control" id="comp_length_vol">
     </div>
     <div class="form-group">
-        <label for="comp_height_vol">What is the size of the height of the compartment/stepwell's internal volume?</label>
+        <label for="comp_height_vol">What is the inner height of the compartment/stepwell's opening? </label>
         <input name="entry.355028750" type="number" min="0" class="form-control" id="comp_height_open">
     </div>
     <div class="form-group">
-        <label for="comp_width_vol">What is the size of the width of the compartment/stepwell's internal volume?</label>
+        <label for="comp_width_vol">What is the outer height of the compartment/stepwell's opening? </label>
         <input name="entry.1927078314" type="number" min="0" class="form-control" id="comp_width_vol">
     </div>
     <div class="form-group">
@@ -245,8 +245,8 @@
     <div class="form-group">
     <label for="generator">Do you have a generator?</label>
     <select name="entry.1455610371" class="form-control" id="generator">
-          <option  value="no">No</option>
-          <option  value="yes">Yes</option>
+          <option value="no">No</option>
+          <option value="yes">Yes</option>
     </select>
   </div>
     <div class="form-group" id="dyn_generator">
@@ -292,8 +292,8 @@
     <div class="form-group">
         <label for="roof_drawings">Do you have drawings of your roof?</label>
         <select name="entry.570435092" class="form-control" id="roof_drawings">
-        <option >No</option>
-        <option >Yes</option>
+        <option value="no">No</option>
+        <option value="yes">Yes</option>
         </select>
     </div>
     <div class="form-group">
@@ -311,25 +311,25 @@
      <div class="form-group">
         <label for="roof_meas">Could you get pictures and measurements of your roof?</label> <br/><br/>
         
-        <input type="radio" name="entry.246292429"/> No <br/><br/>
-        <input type="radio" name="entry.246292429"/>Yes <br/><br/>
+        <input type="radio" value="no" name="entry.246292429"/> No <br/><br/>
+        <input type="radio" value="yes" name="entry.246292429"/>Yes <br/><br/>
         
     </div>
     <div class="form-group">
         <label for="roof_type">Do you have a rubber roof or fiberglass roof?</label> <br/><br/>
      
-        <input type="radio" name="entry.1348623927"/> Rubber <br/><br/>
-        <input type="radio" name="entry.1348623927"/> Fiberglass <br/><br/>
-        <input type="radio" name="entry.1348623927"/> 	Other <br/><br/>
+        <input type="radio" value="Rubber" name="entry.1348623927"/> Rubber <br/><br/>
+        <input type="radio" value="Fiberglass" name="entry.1348623927"/> Fiberglass <br/><br/>
+        <input type="radio" value="Other" name="entry.1348623927"/> Other <br/><br/>
  
     </div>
     <div class="form-group">
         <label for="roof_condition">What is the condition of your roof?</label> <br/><br/>
        
-        <input type="radio" name="entry.1300318747"/> Like new <br/><br/>
-        <input type="radio" name="entry.1300318747"/> Needs repair <br/><br/>
-        <input type="radio" name="entry.1300318747"/> Known defects such as tears, leaks, etc. <br/><br/>
-        <input type="radio" name="entry.1300318747"/> Unsure <br/><br/>
+        <input type="radio" value="Like new" name="entry.1300318747"/> Like new <br/><br/>
+        <input type="radio" value="Needs repair" name="entry.1300318747"/> Needs repair <br/><br/>
+        <input type="radio" value="Known concerns such as tears, leaks, etc." name="entry.1300318747"/> Known concerns such as tears, leaks, etc. <br/><br/>
+        <input type="radio" value="Unsure" name="entry.1300318747"/> Unsure <br/><br/>
      
     </div>
      <div class="form-group">
@@ -347,7 +347,7 @@
     </div>
     <div class="form-group">
         <label for="travel_plans">What are your travel plans?</label>
-        <input name="entry.1645442897" type="text" class="form-control" id="travel_plans"/>
+        <input name="entry.1645443897" class="form-control" type="text" id="travel_plans"/>
     </div>
     <div class="form-group">
         <label for="power_goal">What goals do you have for power use?</label>
@@ -355,30 +355,26 @@
     </div>
    <div class="form-group">
         <label for="medical_eqp">Do you use any medical equipment on the RV?</label><br>
-        <input name="entry.1386762538" type="radio" id="CPAP" name="CPAP" value="CPAP"/>
-        <label for="CPAP">CPAP</label><br>
-        <input name="entry.1386762538" type="radio" id="oxygen_mach" value="Oxygen Machine"/>
-        <label for="oxygen_mach">Oxygen Machine</label><br>
-        <input name="entry.1386762538" type="radio" id="humidifier" value="Humidifier"/>
-        <label for="humidifier">Humidifier</label><br>
-        <input name="entry.1386762538" type="radio" id="refrigerator" value="Refrigerator"/>
-        <label for="refrigerator">Refrigerator</label><br>
-        <input name="entry.1386762538" type="radio" id="bathroom" value="Bathroom"/>
-        <label for="bathroom">Bathroom</label><br>
-        <input name="entry.1386762538" type="radio" id="other" value="Other"/>
-        <label for="other">Other</label><br>
+        <input name="entry.1386762538" type="radio" id="CPAP" name="CPAP" value="CPAP"/> CPAP <br><br>
+        <input name="entry.1386762538" type="radio" id="oxygen_mach" value="Oxygen Machine"/> Oxygen Machine <br><br>
+        <input name="entry.1386762538" type="radio" id="humidifier" value="Humidifier"/> Humidifier <br><br>
+        <input name="entry.1386762538" type="radio" id="refrigerator" value="Refrigerator"/> Refrigerator <br><br>
+        <input name="entry.1386762538" type="radio" id="bathroom" value="Bathroom"/> Bathroom <br><br>
+        <input name="entry.1386762538" type="radio" id="other" value="Others"/> Other <br><br>
+        <input name="entry.1386762538" type="radio" id="other" value="No Medical Equipment"/> No Medical Equipment <br><br>
+        
     </div>
-	<div class="form-group">
-		<label for="othercomponents">Would you like any other components?</label><br>
-		<input name="entry.1592971449" type="radio" id="microair" value="Micro-Air softstarts"/>
-		<label for="microair">Micro-Air softstarts</label><br>
-		<input name="entry.1592971449" type="radio" id="bluetooth" value="Bluetooth connections"/>
-		<label for="bluetooth">Bluetooth connections</label><br>
-	 	<input name="entry.1592971449" type="radio" id="motorizedswitch" value="Motorized disconnect swith"/>
-		<label for="motorizedswitch">Motorized disconnect switch</label><br>
-		<input name="entry.1592971449" type="radio" id="manualswitch" value="Manual disconnect switch"/>
-		<label for="manualswitch">Manual disconnect switch</label><br>
-	</div>
+  <div class="form-group">
+    <label for="othercomponents">Would you like any other components?</label><br>
+    <input name="entry.1592971449" type="radio" id="microair" value="Micro-Air softstarts" /> Micro-Air softstarts <br><br>
+    
+    <input name="entry.1592971449" type="radio" id="bluetooth" value="Bluetooth connections" /> Bluetooth connections <br><br>
+    
+    <input name="entry.1592971449" type="radio" id="motorizedswitch" value="Motorized disconnect switch" /> Motorized disconnect swith <br><br>
+    
+    <input name="entry.1592971449" type="radio" id="manualswitch" value="Manual disconnect switch" /> Manual disconnect switch <br><br>
+    
+  </div>
   <input type="submit" value="Submit" class="btn btn-primary"/>
 </form>
 

@@ -51,12 +51,7 @@
   <!-- Template Main CSS File -->
   <link href="assets/css/style.css" rel="stylesheet">
 
-  <!-- =======================================================
-  * Template Name: Vesperr - v3.0.1
-  * Template URL: https://bootstrapmade.com/vesperr-free-bootstrap-template/
-  * Author: BootstrapMade.com
-  * License: https://bootstrapmade.com/license/
-  ======================================================== -->
+  
 </head>
 
 <body>
@@ -73,14 +68,14 @@
       <nav class="nav-menu d-none d-lg-block">
         <ul>
 
-          <li><a href="index.html#customer">New Customers</a></li>
-          <li><a href="index.html#assessment">RV Assessment</a></li>
-          <li><a href="index.html#mediaupload">Images and Video Upload</a></li>
+          <li><a href="https://web.ics.purdue.edu/~mehta110/ie431/customer_form">New Customers</a></li>
+          <li><a href="https://web.ics.purdue.edu/~mehta110/ie431/">RV Assessment</a></li>
+          <li><a href="https://web.ics.purdue.edu/~mehta110/ie431#mediaupload">Images and Video Upload</a></li>
 
 
-          <li><a href="index.html#contact">Contact</a></li>
+          <li><a href="https://web.ics.purdue.edu/~mehta110/ie431/index.html#contact">Contact</a></li>
 
-          <li class="get-started"><a href="index.html">Go back to Home Page</a></li>
+          <li class="get-started"><a href="https://web.ics.purdue.edu/~mehta110/ie431/index.html">Go back to Home Page</a></li>
         </ul>
       </nav><!-- .nav-menu -->
 
@@ -121,29 +116,29 @@
 
         <div class="row content">
           <script type="text/javascript">var submitted=false;</script>
-     <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="if(submitted)  {window.location='customer_form.html';}"></iframe>
+     <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="if(submitted)  {window.location='http://web.ics.purdue.edu/~mehta110/ie431/customer_form.html';}"></iframe>
      <form class="form" action="https://docs.google.com/forms/d/e/1FAIpQLSdUF849JOO-C1YbTs7LRMh4S1pfT1-h54pV7lsjSk8v3oXtJA/formResponse" target="hidden_iframe"
    onsubmit="submitted=true;" method="post" onsubmit="target_popup("Thank You")">
 
             <label>What is your name? (First & Last)</label><br/>
-            <input name="entry.949678149" type="text" /> <br/><br/>
+            <input name="entry.949678149" type="text" required /> <br/><br/>
 
             <label>Please enter your FMCA no.</label><br/>
-            <input name="entry.1801089746" type="text" required /> <br/><br/>
+            <input name="entry.1801089746" type="text" maxlength="7" required /> <br/><br/>
 
-            <label>What is your email ID? </label><br/>
-            <input name="entry.1201707388" type="email" /> <br/><br/>
+            <label>What is your email address? </label><br/>
+            <input name="entry.1201707388" type="email" required /> <br/><br/>
 
             <label>What is your phone number?</label><br/>
-            <input name="entry.606326965" type="text" /> <br/><br/>
+            <input name="entry.606326965" type="number" required /> <br/><br/>
 
             <label>What is your address?</label><br/>
-            <input name="entry.867843115" type="text" /><br/><br/>
+            <input name="entry.867843115" type="text"  /><br/><br/>
 
             <label>Please select your preferred method of communication</label> <br/>
-            <input type="radio" name="entry.234843531" value="phone" /> Phone <br/>
-            <input type="radio" name="entry.234843531" value="email" /> Email<br/>
-            <input type="radio" name="entry.234843531" value="textmessage" /> Text Message<br/><br/>
+            <input type="radio" name="entry.234843531" value="Phone"> Phone </input> <br/>
+            <input type="radio" name="entry.234843531" value="Email"> Email </input><br/>
+            <input type="radio" name="entry.234843531" value="Text Message"> Text Message </input><br/><br/>
 
             <label>Please add any additional notes here:</label> <br/>
             <textarea cols="120" rows="10"style="max-width:100%;" name="entry.682084268"> </textarea> <br/> <br/>
@@ -151,9 +146,11 @@
             <label>Technician Name:</label><br/>
             <input name="entry.1892540414" type="text" /><br/><br/>
 
-          <input type="submit" class="myButton" value="Send"/>
+          <input type="submit" class="myButton" value="Send"/> <br/><br/>
           
    </form>
+
+   	<button width="100%" align="center" href="/Assessment_Form.html" class="myButton"> Go to RV Assessment form </button>
 
         </div>
       </div>
